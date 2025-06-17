@@ -26,20 +26,26 @@ export default async function Resume({ params }: { params: { id: string } }) {
 		<MaxWidth className='gap-6'>
 			<div className='flex justify-between items-center gap-4'>
 				{prevRole ? (
-					<Link href={`/resume/${prevRole.slug}`}>
+					<Link
+						href={`/resume/${prevRole.slug}`}
+						className='hover:text-gray-500'
+					>
 						<ArrowLeftIcon size={24} />
 					</Link>
 				) : (
-					<Link href={'/'}>
+					<Link href={'/'} className='hover:text-gray-500'>
 						<Home size={24} />
 					</Link>
 				)}
 				{nextRole ? (
-					<Link href={`/resume/${nextRole.slug}`} className=''>
+					<Link
+						href={`/resume/${nextRole.slug}`}
+						className='hover:text-gray-500'
+					>
 						<ArrowRightIcon size={24} />
 					</Link>
 				) : (
-					<Link href={'/'}>
+					<Link href={'/'} className='hover:text-gray-500'>
 						<Home size={24} />
 					</Link>
 				)}

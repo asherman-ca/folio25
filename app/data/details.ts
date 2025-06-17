@@ -129,21 +129,5 @@ export const details = {
 				href: 'https://supper-eta.vercel.app/',
 			},
 		},
-		{
-			title: 'Chonkify',
-			techStack: [
-				'Side Project',
-				'TypeScript',
-				'Next.js',
-				'Midjourney',
-				'Postgres',
-			],
-			description:
-				'AI image generator that trains model and generates chonky pets in under 60 seconds',
-			link: {
-				label: 'chonkify.vercel.app/',
-				href: 'https://chonkify.vercel.app/',
-			},
-		},
 	],
 }
