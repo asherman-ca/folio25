@@ -1,5 +1,6 @@
 import { details } from '@/app/data/details'
 import MaxWidth from '@/components/MaxWidth'
+import { ArrowLeftIcon, ArrowRightIcon, Home } from 'lucide-react'
 import Link from 'next/link'
 
 export default async function Resume({ params }: { params: { id: string } }) {
@@ -22,61 +23,37 @@ export default async function Resume({ params }: { params: { id: string } }) {
 	console.log('nextRole', nextRole)
 
 	return (
-		<MaxWidth>
-			<div className='min-h-screen flex flex-col'>
-				{/* Main content */}
-				<div className='flex-1'>{currentRole?.company}</div>
-
-				{/* Navigation */}
-				<div className='flex justify-between items-center py-8 border-t'>
-					{prevRole ? (
-						<Link
-							href={`/resume/${prevRole.slug}`}
-							className='flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors'
-						>
-							<svg
-								className='w-4 h-4'
-								fill='none'
-								stroke='currentColor'
-								viewBox='0 0 24 24'
-							>
-								<path
-									strokeLinecap='round'
-									strokeLinejoin='round'
-									strokeWidth={2}
-									d='M15 19l-7-7 7-7'
-								/>
-							</svg>
-							{prevRole.company}
-						</Link>
-					) : (
-						<div className='px-4 py-2 text-sm text-gray-400'>Previous</div>
-					)}
-
-					{nextRole ? (
-						<Link
-							href={`/resume/${nextRole.slug}`}
-							className='flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors'
-						>
-							{nextRole.company}
-							<svg
-								className='w-4 h-4'
-								fill='none'
-								stroke='currentColor'
-								viewBox='0 0 24 24'
-							>
-								<path
-									strokeLinecap='round'
-									strokeLinejoin='round'
-									strokeWidth={2}
-									d='M9 5l7 7-7 7'
-								/>
-							</svg>
-						</Link>
-					) : (
-						<div className='px-4 py-2 text-sm text-gray-400'>Next</div>
-					)}
-				</div>
+		<MaxWidth className='gap-6'>
+			<div className='flex justify-between items-center gap-4'>
+				{prevRole ? (
+					<Link href={`/resume/${prevRole.slug}`}>
+						<ArrowLeftIcon size={24} />
+					</Link>
+				) : (
+					<Link href={'/'}>
+						<Home size={24} />
+					</Link>
+				)}
+				{nextRole ? (
+					<Link href={`/resume/${nextRole.slug}`} className=''>
+						<ArrowRightIcon size={24} />
+					</Link>
+				) : (
+					<Link href={'/'}>
+						<Home size={24} />
+					</Link>
+				)}
+			</div>
+			<div className='flex flex-col gap-2'>
+				<span className='text-2xl font-semibold'>
+					{currentRole.title} at {currentRole?.company}
+				</span>
+				<span className=''>
+					{currentRole.start} - {currentRole.end ?? 'Present'}
+				</span>
+				<span className='mt-2'>
+					{currentRole.description.split(' Technologies')[0]}
+				</span>
 			</div>
 		</MaxWidth>
 	)
