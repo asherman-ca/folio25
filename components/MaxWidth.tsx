@@ -3,7 +3,7 @@ export default function MaxWidth({
 	className,
 }: {
 	children: React.ReactNode
-	className: string
+	className?: string
 }) {
 	return (
 		<div

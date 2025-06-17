@@ -1,6 +1,7 @@
 export const details = {
 	roles: [
 		{
+			slug: 'candace-crow-design',
 			company: 'Candace Crow Design',
 			link: 'https://candacecrowe.com/',
 			badges: ['Remote'],
@@ -11,6 +12,7 @@ export const details = {
 				'Ground up development of custom CMS, Database architecture, Prod & Dev infrastructure, Image processing, Partner integrations. Technologies: React, TypeScript, SQL',
 		},
 		{
+			slug: 'lyell-immunopharma',
 			company: 'Lyell Immunopharma',
 			link: 'https://lyell.com/',
 			badges: ['Hybrid'],
@@ -21,7 +23,8 @@ export const details = {
 				'Designed & implemented FE data solution for lyell.com, deployed & maintained IT automation workflows. Technologies: React, TypeScript, Node.js',
 		},
 		{
-			company: 'Nurx',
+			slug: 'nurx-healthcare',
+			company: 'Nurx Healthcare',
 			link: 'https://nurx.com',
 			badges: ['On Site'],
 			title: 'Software Engineer',
@@ -31,6 +34,7 @@ export const details = {
 				'Implimented new features, performed database migrations & mutations, and implimented design patterns. Technologies: Ember, TypeScript, Node.js',
 		},
 		{
+			slug: 'myonlinepool',
 			company: 'MyOnlinePool',
 			link: 'https://myonlinepool.com',
 			badges: ['Remote'],
@@ -41,6 +45,7 @@ export const details = {
 				'Created NFL-fantasy-sports web application. Implimented authentication features, NFL stats integrations and Stripe processing. Technologies: Rails, React, SQL',
 		},
 		{
+			slug: 'app-academy',
 			company: 'App Academy',
 			link: 'https://www.appacademy.io/',
 			badges: ['On Site'],

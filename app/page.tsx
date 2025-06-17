@@ -43,10 +43,19 @@ export default function Home() {
 			</div>
 
 			<div className='flex flex-col gap-4'>
-				<div id='roles'>
-					{details.roles.map((role) => {
-						return <div>{role.company}</div>
-					})}
+				<div id='roles' className='flex flex-col gap-0.5'>
+					{details.roles.map((role) => (
+						<a
+							key={role.company}
+							className='flex gap-1 hover:-translate-x-[10px] transition-transform cursor-pointer'
+							href={`/resume/${role.slug}`}
+						>
+							<div className='font-semibold'>{role.company}</div>
+							<div className='font-light text-muted-foreground'>
+								{role.title}
+							</div>
+						</a>
+					))}
 				</div>
 
 				<div id='projects'>projects</div>
