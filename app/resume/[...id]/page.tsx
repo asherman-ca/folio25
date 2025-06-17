@@ -3,7 +3,11 @@ import MaxWidth from '@/components/MaxWidth'
 import { ArrowLeftIcon, ArrowRightIcon, Home } from 'lucide-react'
 import Link from 'next/link'
 
-export default async function Resume({ params }: { params: { id: string } }) {
+export default async function Resume({
+	params,
+}: {
+	params: Promise<{ id: string[] }>
+}) {
 	const { id } = await params
 
 	const currentRoleIndex = details.roles.findIndex(
