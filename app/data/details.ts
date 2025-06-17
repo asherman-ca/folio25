@@ -18,7 +18,7 @@ export const details = {
 			badges: ['Hybrid'],
 			title: 'Team Leader',
 			start: '2021',
-			end: null,
+			end: '2024',
 			description:
 				'Designed & implemented FE data solution for lyell.com, deployed & maintained IT automation workflows. Technologies: React, TypeScript, Node.js',
 		},

@@ -23,9 +23,6 @@ export default async function Resume({
 	const prevRole = prevIndex !== null ? details.roles[prevIndex] : null
 	const nextRole = nextIndex !== null ? details.roles[nextIndex] : null
 
-	console.log('prevRole', prevRole)
-	console.log('nextRole', nextRole)
-
 	return (
 		<MaxWidth className='gap-6'>
 			<div className='flex justify-between items-center gap-4'>
