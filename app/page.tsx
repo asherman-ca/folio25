@@ -1,4 +1,4 @@
-import { Link, MailIcon, PhoneIcon } from 'lucide-react'
+import { MailIcon, PhoneIcon } from 'lucide-react'
 import MaxWidth from '@/components/MaxWidth'
 import { GitHubIcon } from './icons/GithubIcon'
 import { LinkedInIcon } from './icons/LinkedinIcon'

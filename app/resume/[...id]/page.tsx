@@ -3,6 +3,12 @@ import MaxWidth from '@/components/MaxWidth'
 import { ArrowLeftIcon, ArrowRightIcon, Home } from 'lucide-react'
 import Link from 'next/link'
 
+export function generateStaticParams() {
+	return details.roles.map((role) => ({
+		id: [role.slug],
+	}))
+}
+
 export default async function Resume({
 	params,
 }: {
@@ -11,7 +17,7 @@ export default async function Resume({
 	const { id } = await params
 
 	const currentRoleIndex = details.roles.findIndex(
-		(role) => role.slug === id[0]
+		(role) => role.slug === id[0],
 	)
 	const currentRole = details.roles[currentRoleIndex]
 
