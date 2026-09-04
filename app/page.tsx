@@ -12,7 +12,7 @@ export default function Home() {
 				<div className='flex md:flex-row flex-col items-start md:items-end gap-2'>
 					<h1 className='text-5xl font-bold'>Alex Sherman</h1>
 					<span className='text-xl font-bold'>
-						Software Engineer & Systems Architect
+						Software Engineer & Systems Administrator
 					</span>
 				</div>
 				<div className='flex flex-col items-start gap-2'>
